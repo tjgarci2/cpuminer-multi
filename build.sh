@@ -23,7 +23,7 @@ if [ ! "0" = `cat /proc/cpuinfo | grep -c avx` ]; then
     extracflags="$extracflags -march=native"
 fi
 
-./configure --with-crypto --with-curl CFLAGS="-O2 $extracflags -DUSE_ASM -pg"
+./configure.ac --with-crypto --with-curl CFLAGS="-O2 $extracflags -DUSE_ASM -pg"
 
 make -j 4
 
